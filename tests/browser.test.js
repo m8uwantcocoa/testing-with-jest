@@ -34,3 +34,15 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+describe('Clicking "Vad finns överst på stacken?"', () => {
+    it('should display the top element in the UI', async () => {
+        let peekBtn = await driver.findElement(By.id('peek'));
+        await peekBtn.click();
+
+        let topText = await driver.findElement(By.id('top_of_stack')).getText();
+
+        // de fel medvetet
+        expect(topText).toEqual("Äpplen"); 
+    });
+});
