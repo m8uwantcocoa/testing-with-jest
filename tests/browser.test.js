@@ -42,7 +42,7 @@ describe('Clicking "Vad finns överst på stacken?"', () => {
 
         let topText = await driver.findElement(By.id('top_of_stack')).getText();
 
-        // de fel medvetet
-        expect(topText).toEqual("Äpplen"); 
+        // fixad
+        expect(topText).toEqual("Bananer"); 
     });
 });
