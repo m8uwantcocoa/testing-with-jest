@@ -17,3 +17,10 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBeDefined();
     expect(stack.peek()).toBe(42);
 });
+// mitt nya test
+test('pop should remove and return the top element', () => {
+    stack.push("nytt_element");
+    
+    // de fel 
+    expect(stack.pop()).toBe("ett_helt_annat_värde"); 
+});
